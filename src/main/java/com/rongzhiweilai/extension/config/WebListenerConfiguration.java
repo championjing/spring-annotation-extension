@@ -13,14 +13,18 @@ import java.util.List;
 
 /**
  * @author : championjing
- * @ClassName: WebListenerConfiguration
- * @Description: TODO
- * @Date: 3/5/2019 5:58 PM
+ * ClassName: WebListenerConfiguration
+ * Description: 注入配置信息
+ * @since: 3/5/2019 5:58 PM
  */
 @Configuration
 public class WebListenerConfiguration extends WebMvcConfigurerAdapter {
     private final static Logger LOGGER = LoggerFactory.getLogger(WebListenerConfiguration.class);
-    
+
+    /**
+     * 在参数解析器中加入自定义的解析器
+     * @param argumentResolvers
+     */
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
         LOGGER.debug("添加json解析器");

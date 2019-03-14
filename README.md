@@ -8,3 +8,7 @@
 
 # 项目使用方法
 - 见示例项目代码 [https://github.com/championjing/spring-annotation-extension/tree/master/demo](https://github.com/championjing/spring-annotation-extension/tree/master/demo)
+
+
+## 发布
+- pom.xml配置好<plugin>、<distributionManagement>并在setting.xml中配置用户名和密码之后，终端中执行mvn deploy -P release即可发布

@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.ValueConstants;
 
 /**
  * @author : championjing
- * @ClassName: JSONParam
- * @Description: For spring web, @JSONParam like @RequestParam, difference is as below
+ * ClassName: JSONParam
+ * Description: For spring web, @JSONParam like @RequestParam, difference is as below
  * -----------------------------------------------------------------------
  * content-type |  application/json  |  application/x-www-form-urlencoded
  * -----------------------------------------------------------------------
  *              |  @JSONParam        |     @RequestParam
  * -----------------------------------------------------------------------
- * @Date: 3/5/2019 5:05 PM
+ * @since: 3/5/2019 5:05 PM
  */
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)

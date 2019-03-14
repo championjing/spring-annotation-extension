@@ -21,14 +21,19 @@ import java.io.InputStream;
 
 /**
  * @author : championjing
- * @ClassName: JSONParamAnnotationResolver
- * @Description: TODO
- * @Date: 3/5/2019 5:08 PM
+ * ClassName: JSONParamAnnotationResolver
+ * Description: TODO
+ * @since: 3/5/2019 5:08 PM
  */
 public class JSONParamAnnotationResolver implements HandlerMethodArgumentResolver {
     private static Logger LOGGER = LoggerFactory.getLogger(JSONParamAnnotationResolver.class);
     private static final String CONTENT_TYPE = "application/json";
-    
+
+    /**
+     * 注解生效判断逻辑
+     * @param parameter
+     * @return
+     */
 //    @Override
     public boolean supportsParameter(MethodParameter parameter) {
         LOGGER.debug("初始化json参数解析器");
@@ -40,6 +45,15 @@ public class JSONParamAnnotationResolver implements HandlerMethodArgumentResolve
         }
     }
 
+    /**
+     * 注解的实现代码
+     * @param parameter
+     * @param mavContainer
+     * @param webRequest
+     * @param binderFactory
+     * @return 返回被注解的类型对象
+     * @throws Exception
+     */
 //    @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         HttpServletRequest request = (HttpServletRequest) webRequest.getNativeRequest();
